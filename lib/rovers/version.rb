@@ -1,3 +1,3 @@
-module Example
+module Rovers
   VERSION = "0.1.0".freeze
 end

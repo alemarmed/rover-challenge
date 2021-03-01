@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require "bundler/setup"
+require "rovers"
+
+input = ARGF.readlines.map(&:split)
+
+squad = Rovers::Squad.new(input)
+squad.deploy!
+
+squad.status.each { |status| puts status.map(&:to_s).join(" ") }
